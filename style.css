@@ -1,84 +1,95 @@
-@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     font-family: 'Josefin Sans' , sans-serif;
+   }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+   body{
+     background-color: yellow;
+   }
 
-body{
-    background: white;
-    font-family: 'Josefin Sans', sans-serif;
-}
+   .wrapper{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     max-width: 350px;
+     width: 100%;
+     background: white;
+     padding: 25px;
+     border-radius: 5px;
+     box-shadow: 4px 4px 2px rgba(254,236,164,1);
+   }
 
-.wrapper{
-    margin-top: 10%;
-}
+  
+   .wrapper h2{
+     text-align: center;
+     margin-bottom: 20px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     color: purple;
+   }
 
-.wrapper h1{
-    font-family: 'Allura', cursive;
-    font-size: 52px;
-    margin-bottom: 60px;
-    text-align: center;
-    
-}
+   .wrapper .input_field{
+      margin-bottom: 10px;
+   }
 
-.team{
-    display: flex;
-    text-align: center;
-    width: auto;
-    justify-content: center;
-    justify-content: center;
-}
+  .wrapper .input_field input[type="text"]{
+      width: 100%;
+      border: 1px solid black;
+      padding: 10px;
+   }
+  
+   .wrapper .btn input[type="submit"]{
+     border: 0;
+     margin-top: 15px;
+     padding: 10px;
+     width: 100%;
+     background: yellow;
+     color: #332902;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-weight: bold;
+     border-radius: 25px;
+     cursor: pointer;
+   }
 
-.team .team_member{
-    background:yellow;
-    margin: 5px;
-    margin-bottom: 50px;
-    width: 300px;
-    padding: 20px;
-    line-height: 20px;
-    position: relative;
-}
+   .wrapper #error_message{
+     margin-bottom: 20px;
+     padding: 0px;
+     text-align: center;
+     font-size: 14px;
+     transition: all 0.5s ease;
 
-.team .team_member h3{
-    color: purple;
-    font-size: 26px;
-    margin-top: 50px;
-}
+   }
 
-.team .team_member p.role{
-    color: yellowgreen;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin: 12px 0;
-}
 
-.team .team_member .team_img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
+   @media only screen and (max-width: 1150px) {
+    .wrapper{
+        max-width: 500px;
+        
+      
+    }
+    .wrapper h2{
+      margin-bottom: 30px;
+      letter-spacing: 10px;
+    }
 
-.team .team_member .team_img img{
-    width: 100px;
-    height: 100px;
-}
+    .wrapper .input_field{
+      margin-bottom: 25px;
+   }
+   .wrapper .input_field input[type="text"]{
+    width: 50%;
+    padding: 15px;
+  }
 
-@media only screen and (max-width: 1150px) {
-.team{
-    flex-direction: column;
-}
+  .wrapper .btn input[type="submit"]{
+    margin-top: 30px;
+  }
 
-.team_member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.team .team_member .team_img img{
-    text-align: center;
-    margin: 20px 60px 80px 60px;
-    font-size: 20px;
-}
+  .wrapper #error_message{
+    margin-bottom: 30px;
+  } 
 }

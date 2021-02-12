@@ -1,95 +1,209 @@
-  *{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     outline: none;
-     font-family: 'Josefin Sans' , sans-serif;
-   }
-
-   body{
-     background-color: yellow;
-   }
-
-   .wrapper{
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-     max-width: 350px;
-     width: 100%;
-     background: white;
-     padding: 25px;
-     border-radius: 5px;
-     box-shadow: 4px 4px 2px rgba(254,236,164,1);
-   }
-
-  
-   .wrapper h2{
-     text-align: center;
-     margin-bottom: 20px;
-     text-transform: uppercase;
-     letter-spacing: 3px;
-     color: purple;
-   }
-
-   .wrapper .input_field{
-      margin-bottom: 10px;
-   }
-
-  .wrapper .input_field input[type="text"]{
-      width: 100%;
-      border: 1px solid black;
-      padding: 10px;
-   }
-  
-   .wrapper .btn input[type="submit"]{
-     border: 0;
-     margin-top: 15px;
-     padding: 10px;
-     width: 100%;
-     background: yellow;
-     color: #332902;
-     text-transform: uppercase;
-     letter-spacing: 5px;
-     font-weight: bold;
-     border-radius: 25px;
-     cursor: pointer;
-   }
-
-   .wrapper #error_message{
-     margin-bottom: 20px;
-     padding: 0px;
-     text-align: center;
-     font-size: 14px;
-     transition: all 0.5s ease;
-
-   }
-
-
-   @media only screen and (max-width: 1150px) {
-    .wrapper{
-        max-width: 500px;
-        
-      
-    }
-    .wrapper h2{
-      margin-bottom: 30px;
-      letter-spacing: 10px;
-    }
-
-    .wrapper .input_field{
-      margin-bottom: 25px;
-   }
-   .wrapper .input_field input[type="text"]{
-    width: 50%;
-    padding: 15px;
-  }
-
-  .wrapper .btn input[type="submit"]{
-    margin-top: 30px;
-  }
-
-  .wrapper #error_message{
-    margin-bottom: 30px;
-  } 
+*{
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: #efefef;
+}
+
+main{
+    width: 100%;
+    height :100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.75);
+}
+
+.left-side{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    background-image: url(images/DBHotel.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin-top: 50px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: purple;
+    margin-top: 70px;
+}
+
+.nav span{
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.active{
+    color:black;
+}
+.content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background: #efefeffc;
+}
+
+.header{
+    margin: 10px 0px 20px 0px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.header span{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 40px; 
+}
+
+.lined{
+    border-bottom: 1px solid black;
+}
+
+.images{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img{
+    background-color: white;
+    margin: 10px;
+    width: 200px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages{
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.circl{
+   width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.circls{
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin-left: 6px;
+}
+
+.pageIn{
+    background-color: black;
+}
+
+.content-info{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: -10px -1px 28px -14px rgba(0,0,0,0.75);
+}
+
+.close{
+    width: 90%;
+    margin: 15px;
+    text-align: right;
+}
+.cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+
+}
+
+.desc{
+    width: 55%;
+    margin: 15%;
+}
+
+.desc p{
+    font-size: 14px;
+}
+
+.btn{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.btn button{
+    background: transparent;
+    color: black;
+    width: 100px;
+    outline: none;
+    border: 1px solid black;
+    margin-left:40px;
+}
+
+.btn span{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width:400px){
+
+        .container{
+            flex-direction:column;
+        }
+        .logo{
+            width: 30px;
+            height: 10px;
+        }
+        .left-side{
+            width: 30%;
+        }
+        .images{
+            width: 50px;
+            align-items: unset;
+        }
+        .header{
+            margin: 5px 10px 10px 5px;
+            width: 70%;
+        }
+        .desc{
+        width: 60%;
+        margin: 10px;
+        }
+        .close{
+            width: 75%;
+            margin: 5%;
+        }
+}
+   

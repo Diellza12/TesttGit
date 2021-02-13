@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Order</title>
+    <link href="style.css"rel="stylesheet"/>
+</head>
+<body>
+<div class="wrapper">
+    <h2>Online Order</h2>
+    <div id="error_message"></div>
+
+    <form id="myform" onsubmit="return validation()">
+      <div class="input_field">
+          <input type="text" placeholder="Name" id="name">
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="Surname" id="surname">
+        </div>
+    <div class="input_field">
+        <input type="text" placeholder="Phone" id="Phone">
+        </div>
+    <div class="input_field">
+        <input type="text" placeholder="Address" id="address">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="What u want" id="what u want">
+    </div>
+    <div class="btn">
+        <input type="Submit">
+    </div>
+  </form>
+</div>
+</body>    
+</html>
+
+<script>
+    function validation(){
+        alert ("Your order was Sucsessful");
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById("surname").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var whatuwant = document.getElementById("what u want").value;
+        var error_message = document.getElementById("error_message").value;
+        var text;
+
+        error_message.style.padding = "10px";
+
+        alert(name);
+        alert(surname);
+        alert(phone);
+        alert(address);
+        alert(whatuwant);
+        }
+</script>
